@@ -19,7 +19,7 @@ def add_assistant_message(messages, text):
 
 def chat(messages):
     response = client.chat.completions.create(
-        model="gemini-2.0-flash-lite",  # free model
+        model="gemini-2.5-flash",  # free model
         messages=messages,
         temperature=0.3,  # lower = more focused answers
         stream=True,      # prints words as they arrive, feels faster
