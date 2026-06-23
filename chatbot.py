@@ -1,5 +1,5 @@
-import os from openai
-import OpenAI 
+import os
+from openai import OpenAI
 from dotenv import load_dotenv
 # Loads the GOOGLE_API_KEY from your .env file
 load_dotenv()
@@ -19,7 +19,7 @@ def add_assistant_message(messages, text):
 
 def chat(messages):
     response = client.chat.completions.create(
-        model="gemini-2.5-flash-lite-preview-06-17",  # free model
+        model="gemini-2.0-flash-lite",  # free model
         messages=messages,
         temperature=0.3,  # lower = more focused answers
         stream=True,      # prints words as they arrive, feels faster
